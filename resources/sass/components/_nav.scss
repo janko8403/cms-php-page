@@ -1,0 +1,232 @@
+.navbar {
+    position: relative;
+    height: 85px;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+
+    @include breakpoint(sm) {
+        height: 90px;
+    }
+}
+
+.navbar-default {
+    background-color: $white;
+    border-color: $white;
+    position: fixed;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.25s ease;
+
+    @include breakpoint(sm) {
+        background-color: transparent;
+        border-color: transparent;
+        position: relative;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    .navbar-toggle {
+        margin-top: 26px;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+.header-fixed {
+    position: fixed;
+    background: $white;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s ease;
+}
+
+.nav {
+    li {
+        padding: 5px 15px;
+
+        @include breakpoint(sm) {
+            padding: 10px 15px;
+        }
+
+        &.lang {
+            padding: 5px 5px;
+
+            a {
+                cursor: pointer;
+                text-transform: uppercase;
+            }
+
+            @include breakpoint(sm) {
+                padding: 10px 5px;
+            }
+
+            &.active-lang {
+                a {
+                    color: $blue !important;
+                }
+            }
+        }
+
+        &.active {
+            a {
+                color: $blue !important;
+                background-color: transparent !important;
+            }
+        }
+
+        a {
+            padding: 0;
+            font-family: $roboto;
+            font-weight: 300;
+            font-size: 1.5rem;
+            color: $black !important;
+            transition: all 0.25s ease;
+            letter-spacing: 0;
+
+            &.bold {
+                font-weight: 900;
+            }
+
+            &:hover {
+                // border-bottom: 0px solid transparent;
+                color: $blue !important;
+                text-decoration: none;
+
+                @include breakpoint(sm) {
+                    // border-bottom: 2px solid $blue;
+                }
+            }
+
+            @include breakpoint(sm) {
+                padding-top: 25px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+    background-color: $white;
+    margin-top: 16px;
+    border-color: $white;
+    max-height: 385px;
+    box-shadow: 0 3px 0px rgba(68, 133, 228, 1);
+
+    @include breakpoint(sm) {
+        background-color: transparent;
+        margin-top: 0;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+.navbar-brand {
+    float: left;
+    padding: 18px;
+    font-size: 18px;
+    line-height: 20px;
+
+    @include breakpoint(sm) {
+        padding: 20px;
+    }
+}
+
+.navbar-left {
+    background-color: $white;
+    height: 100%;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    position: fixed;
+    top: 0;
+    transition: 0.5s;
+    width: 0;
+    z-index: 999999999;
+
+    &.open-menu {
+        width: 100%;
+
+        @include breakpoint(sm) {
+            width: 300px;
+        }
+    }
+
+    ul.nav-box-left {
+        margin-top: 15px;
+
+        li {
+            &.item {
+                padding: 2px 0;
+    
+                a {
+                    font-size: 20px;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    color: $black;
+                    position: relative;
+                    white-space: nowrap;
+                    display: inline-block;
+                    transition: color 0.2s ease;
+                    cursor: pointer;
+    
+                    &.item-eng {
+                        color: $blue;
+                    }
+
+                    &.bold {
+                        font-weight: 900;
+                    }
+    
+                    // &::after,
+                    // &::before {
+                    //     content: "";
+                    //     position: absolute;
+                    //     top: calc(100% + 5px);
+                    //     width: 0;
+                    //     right: 0;
+                    //     height: 2px;
+                    // }
+    
+                    // &::before {
+                    //     transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88)
+                    //         0.1s;
+                    //     background: $black;
+                    // }
+    
+                    // &::after {
+                    //     transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+                    //     background: $black;
+                    // }
+    
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+    
+                        // &::after,
+                        // &::before {
+                        //     width: 100%;
+                        //     left: 0;
+                        // }
+                    }
+                }
+            }
+            &.active {
+                a {
+                    color: $blue !important;
+                }
+            }
+        }
+    }
+}
+
+.site-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9998;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-animation: fade 500ms;
+    animation: fade 500ms;
+}

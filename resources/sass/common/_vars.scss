@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700,800|Roboto:300,400,700,900");
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+$nunito: "Nunito Sans", sans-serif;
+$roboto: "Roboto", sans-serif;
+
+// Primary colors
+$white: #fff;
+$black: #000;
+$yellow: #FBDE38;
+$blue: #0285e4;
+$light-blue: #b2e5ff;
+$light-gray: #2a2a2a;
+$gray: #616161;
+
+// Error message
+$red: #f00;
+$green: rgb(6, 173, 0);
+
+// Breakpoints
+$xs: 480px;
+$sm: 767px;
+$md: 990px;
+$lg: 1024px;
+$xl: 1280px;
+
+// Constants
+$font-path: "../fonts";

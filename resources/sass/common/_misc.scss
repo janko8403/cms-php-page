@@ -1,0 +1,158 @@
+.no-margin {
+    margin: 0 !important;
+}
+
+.block {
+    display: block;
+}
+
+.ib {
+    display: inline-block;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.full-width {
+    width: 100%;
+    max-width: none;
+}
+
+.relative,
+[data-relative] {
+    position: relative;
+}
+
+.absolute,
+[data-absolute] {
+    position: absolute;
+}
+
+.img-center {
+    display: block;
+    margin: 0 auto;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.margin-center {
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.spacer {
+    position: relative;
+    display: block;
+
+    &.s1 {
+        height: 1rem;
+    }
+    &.s2 {
+        height: 2rem;
+    }
+    &.s3 {
+        height: 3rem;
+    }
+    &.s4 {
+        height: 4rem;
+    }
+}
+
+.hide-on-xs {
+    display: none;
+
+    @include breakpoint(sm) {
+        display: block;
+    }
+}
+
+.show-on-xs {
+    display: block;
+
+    @include breakpoint(sm) {
+        display: none;
+    }
+}
+
+.bg-white {
+    background-color: #f3f3f3;
+}
+
+.bg-yellow {
+    background-color: $yellow;
+}
+
+.arrow-down {
+    width: 60%;
+}
+
+.map-radius {
+    width: 100%;
+    height: 100%;
+
+    img {
+        border-radius: 20px;
+    }
+}
+
+.iframe-form {
+    width: 360px;
+    height: 1500px;
+    margin: 0 auto;
+    display: block;
+
+    @include breakpoint(sm) {
+        width: 800px;
+        height: 1480px;
+    }
+}
+
+.col-blue,
+.col-yellow {
+    a {
+        padding: 50px 0;
+        display: block;
+        font-family: $roboto;
+        font-weight: 500;
+        font-size: 3rem;
+
+        i {
+            position: relative;
+            top: 2px;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.col-blue {
+    background: $blue;
+
+    a {
+        color: $white;
+    }
+}
+
+.col-yellow {
+    background: $yellow;
+
+    a {
+        color: $black;
+    }
+}
+
+.box-contact {
+    min-height: auto;
+
+    @include breakpoint(sm) {
+        min-height: 290px;
+    }
+}

@@ -1,0 +1,94 @@
+h1,
+h2,
+h3,
+h4 {
+	line-height: 1.25em;
+	margin-bottom: 0.5em;
+	letter-spacing: -0.3px;
+	color: $black;
+	will-change: auto;
+}
+
+h1 {
+	font-family: $nunito;
+	font-size: 2.4rem;
+	font-weight: 700;
+
+	@include breakpoint(sm) {
+		font-size: 5.4rem;
+	}
+}
+
+h2 {
+	font-size: 2rem;
+	margin-bottom: 5px;
+	font-family: $roboto;
+	font-weight: 300;
+
+	@include breakpoint(sm) {
+		font-size: 3.2rem;
+	}
+
+	span {
+		&.text-yellow {
+			color: $yellow;
+			font-size: 2rem;
+
+			@include breakpoint(sm) {
+				font-size: 6rem;
+			}
+		}
+		&.text-blue {
+			color: $blue;
+		}
+	}
+}
+
+h3 {
+	font-size: 3.2rem;
+	line-height: 4rem;
+	margin-bottom: 5px;
+	font-family: $roboto;
+	font-weight: 500;
+}
+
+h6 {
+	font-size: 1.6rem;
+	line-height: 2rem;
+	margin-bottom: 5px;
+	font-family: $roboto;
+	font-weight: 600;
+
+	@include breakpoint(sm) {
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+	}
+}
+
+a {
+	text-decoration: none;
+
+	&.mx-auto {
+		margin: 0 auto;
+		display: table;
+	}
+}
+
+p {
+	font-family: $roboto;
+	font-weight: 300;
+	font-size: 2.2rem;
+	line-height: 3rem;
+	margin-bottom: 1em;
+	text-align: justify;
+
+	span {
+		font-family: $roboto;
+		font-weight: 700;
+	}
+}
+
+.text-href-bold {
+	font-weight: 600 !important;
+	color: $black !important;
+}

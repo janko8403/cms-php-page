@@ -1,0 +1,26 @@
+.box-yellow {
+	border: 3px solid $yellow;
+	border-radius: 20px;
+	text-align: center;
+	padding: 25px;
+	display: table;
+	margin: 0 auto;
+
+	@include breakpoint(sm) {
+		padding: 25px 130px;
+	}
+
+	a {
+		font-size: 1.4rem;
+		font-weight: 600;
+		color: $black;
+
+		@include breakpoint(sm) {
+			font-size: 2rem;
+		}
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

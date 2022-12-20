@@ -1,0 +1,43 @@
+.box-cph {
+	background-image: linear-gradient(
+		to left,
+		#d9ebf9,
+		#e5effb,
+		#f0f4fd,
+		#f8f9fe,
+		#ffffff
+	);
+	padding: 30px 20px;
+	border-radius: 20px;
+	box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.3);
+	margin-top: 10px;
+	min-height: auto;
+
+	@include breakpoint(sm) {
+		min-height: 250px;
+	}
+
+	@include breakpoint(md) {
+		min-height: 226px;
+	}
+
+	p {
+		font-size: 1.6rem;
+		line-height: 2rem;
+		margin-bottom: 0;
+	}
+}
+
+[data-count] {
+	position: relative;
+
+	&:before {
+		position: absolute;
+		content: attr(data-count);
+		font-size: 5rem;
+		font-weight: 600;
+		left: 15px;
+		top: 10px;
+		color: $light-blue;
+	}
+}

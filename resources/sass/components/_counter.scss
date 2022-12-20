@@ -1,0 +1,46 @@
+.counter {
+	background: $white;
+	border-radius: 20px;
+	box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.3);
+	padding: 30px 20px 20px;
+	margin-top: 20px;
+	min-height: auto;
+	
+	@include breakpoint(sm) {
+		min-height: 210px;
+	}
+	
+	@include breakpoint(md) {
+		min-height: 250px;
+	}
+
+	.count {
+		text-align: center;
+		font-family: $roboto;
+		font-size: 4rem;
+		font-weight: 300;
+		color: $blue;
+
+		@include breakpoint(sm) {
+			font-size: 3rem;
+		}
+		
+		@include breakpoint(md) {
+			font-size: 4rem;
+		}
+	}
+
+	p {
+		font-size: 2rem;
+
+		@include breakpoint(sm) {
+			font-size: 1.5rem;
+			line-height: 2rem;
+		}
+		
+		@include breakpoint(md) {
+			font-size: 2rem;
+			line-height: 3rem;
+		}
+	}
+}
